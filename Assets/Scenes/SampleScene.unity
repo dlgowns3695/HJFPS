@@ -499,7 +499,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 696513773}
-  - component: {fileID: 696513772}
   - component: {fileID: 696513771}
   - component: {fileID: 696513770}
   - component: {fileID: 696513769}
@@ -581,19 +580,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696513768}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &696513772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 696513768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e10af8374b64b947a155c0cfde4cfb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 5
 --- !u!4 &696513773
 Transform:
   m_ObjectHideFlags: 0
@@ -744,7 +730,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1317328140}
-  - component: {fileID: 1317328141}
   - component: {fileID: 1317328139}
   - component: {fileID: 1317328138}
   - component: {fileID: 1317328137}
@@ -841,19 +826,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1317328141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317328136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e10af8374b64b947a155c0cfde4cfb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 5
 --- !u!1 &1376702033
 GameObject:
   m_ObjectHideFlags: 0
@@ -863,7 +835,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1376702034}
-  - component: {fileID: 1376702041}
   - component: {fileID: 1376702040}
   - component: {fileID: 1376702037}
   - component: {fileID: 1376702036}
@@ -1020,18 +991,6 @@ MonoBehaviour:
   isRuning: 0
   isStop: 0
   isJumping: 0
---- !u!114 &1376702041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1376702033}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dda993f0e3b3b86488c00770cbcbd0f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1739158469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,7 +1000,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1739158474}
-  - component: {fileID: 1739158473}
   - component: {fileID: 1739158472}
   - component: {fileID: 1739158471}
   - component: {fileID: 1739158470}
@@ -1123,19 +1081,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739158469}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1739158473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739158469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e10af8374b64b947a155c0cfde4cfb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 5
 --- !u!4 &1739158474
 Transform:
   m_ObjectHideFlags: 0
@@ -1233,7 +1178,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2116010582}
-  - component: {fileID: 2116010581}
   - component: {fileID: 2116010580}
   - component: {fileID: 2116010579}
   - component: {fileID: 2116010578}
@@ -1315,19 +1259,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2116010577}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2116010581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2116010577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e10af8374b64b947a155c0cfde4cfb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 5
 --- !u!4 &2116010582
 Transform:
   m_ObjectHideFlags: 0
@@ -1410,7 +1341,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 9ca2d3c29a594554c92f4fe7645a85d2, type: 2}
+      objectReference: {fileID: 9100000, guid: d613d9eb222e76f468a58da9ce7d69ee, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

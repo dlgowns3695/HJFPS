@@ -44,8 +44,8 @@ public class Player : MonoBehaviour
 
     // public bool grounded = false; // 땅이 아니다, 기본으로 점프 불가하게 설정, true면 점프 가능
     public bool isRuning = false;    // 뛰는 중 아니다 기본값
-    public bool isStop = false;      // 정지 가 아니다 기본값
-    public bool isJumping = false;   // 점프시전 중 아니다 기본값
+    //public bool isStop = false;      // 정지 가 아니다 기본값
+    // public bool isJumping = false;   // 점프시전 중 아니다 기본값
 
     /** 다른 클래스에서 사용할 수 있게 프로퍼티로 만듬 */
     public Vector3 Direction
@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
         anim.SetFloat("VInput", dir.z);
 
         IsGround();
-        IsStop();
+        // IsStop();
 
         Jump();
 
@@ -173,7 +173,7 @@ public class Player : MonoBehaviour
     #endregion // 공격
 
     #region 정지상태체크
-    public void IsStop()
+/*    public void IsStop()
     {
         // 현재 속도의 크기가 임계값보다 작으면 멈춰있는 상태로 판단
         if (dir == Vector3.zero)
@@ -185,7 +185,7 @@ public class Player : MonoBehaviour
             isStop = false;
         }
 
-    }
+    }*/
     #endregion // 정지상태체크
 
     #region 점프
@@ -197,7 +197,7 @@ public class Player : MonoBehaviour
             rigid.AddForce(JumpVelocity, ForceMode.Impulse);
             /*grounded = false; // 점프 후 땅에서 떨어진 상태로 변경*/
             //Debug.Log("Jump!");
-            isJumping = true;
+            // isJumping = true;
         }
     }
     #endregion // 점프
