@@ -172,22 +172,6 @@ public class Player : MonoBehaviour
     }
     #endregion // 공격
 
-    #region 정지상태체크
-/*    public void IsStop()
-    {
-        // 현재 속도의 크기가 임계값보다 작으면 멈춰있는 상태로 판단
-        if (dir == Vector3.zero)
-        {
-            isStop = true;
-        }
-        else
-        {
-            isStop = false;
-        }
-
-    }*/
-    #endregion // 정지상태체크
-
     #region 점프
     private void Jump()
     {

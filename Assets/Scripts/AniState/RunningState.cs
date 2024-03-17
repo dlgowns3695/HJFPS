@@ -37,25 +37,7 @@ public class RunningState : MoveMentBaseState
 
         movement.UpdateSpeed(this);
     }
-    /*    public override void UpdateState(Player movement)
-        {
-            // 뛰다가 키 땟으면  워크상태로 돌아가라
-            if (Input.GetKeyUp(KeyCode.LeftShift))
-            {
-                ExitState(movement, (Mathf.Abs(movement.Direction.magnitude) < 0.01f) ? movement.Idle : movement.Walk);
-            }
 
-            else if (Input.GetButtonDown("Jump") && GameManager.Instance.player.IsGround())
-            {
-                ExitState(movement, movement.Jumping);
-            }
-
-    *//*        else if (Mathf.Abs(movement.Direction.magnitude) < 0.01f) // 속도가 0.1보다 낮아지면 아이들 상태.
-                ExitState(movement, movement.Idle);*//*
-            // 상태에 따라 스피드 조절
-            movement.UpdateSpeed(this);
-        }
-    */
     // 진입 된 메서드 는 없애고, 새로운 상태로 변경 하기 위한, 플레이어에서 MoveMentBaseState -> currentState 로 변수 선언했었음
     public override void ExitState(Player movement, MoveMentBaseState nextSate)
     {
