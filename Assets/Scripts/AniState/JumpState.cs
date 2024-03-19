@@ -23,11 +23,7 @@ public class JumpingState : MoveMentBaseState
     // 상태 변경 후 계속 업데이트 될 메서드
     public override void UpdateState(Player movement)
     {
-        // 공중에 떠 있다면 그냥 빠져나가기
-        if (!movement.IsGround())
-        {
-            return;
-        }
+        
         // 바닥일 때
         if (movement.IsGround())
         {   // 기존 애니메이션을 빠져나가고 새로운 애니메이션으로 가라, 조건 : 속도가 0.1보다 작니? 그럼 아이들
@@ -38,6 +34,12 @@ public class JumpingState : MoveMentBaseState
         }
         if (Input.GetKey(KeyCode.LeftShift))
             ExitState(movement, movement.Run);
+        // 공중에 떠 있다면(땅이 아니라면) 그냥 빠져나가기
+        if (!movement.IsGround())
+        {
+
+            return;
+        }
 
         // 상태(클래스에 따라 움직이는 속도를 조절한다)
         movement.UpdateSpeed(this);

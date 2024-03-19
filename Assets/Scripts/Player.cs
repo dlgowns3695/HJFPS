@@ -16,9 +16,9 @@ public class Player : MonoBehaviour
     [SerializeField] private float walkSpeed = 3f, backwalkSpeed = 2f;
     [SerializeField] private float runSpeed;
     [SerializeField] private float jumpPower;
-    [SerializeField] private float playerForward = 15f;
-    [SerializeField] private float plyaerRotationSpeed = 10f;
-    private float plyaerMoveSpeed = 0f;
+/*    [SerializeField] private float playerForward = 15f;
+    [SerializeField] private float plyaerRotationSpeed = 10f;*/
+    private float playerMoveSpeed = 0f;
     
 
     [Header("Mouse Controller")]
@@ -35,7 +35,6 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
 
     /** 플레이어 상태 체크를 위한 변수들 */
-
     private MoveMentBaseState currentState;
     [HideInInspector] public IdelState Idle = new();
     [HideInInspector] public WalkingState Walk = new();
@@ -64,10 +63,9 @@ public class Player : MonoBehaviour
         anim.SetFloat("HInput", dir.x);
         anim.SetFloat("VInput", dir.z);
 
+        Jump();
         IsGround();
         // IsStop();
-
-        Jump();
 
         CameraRotation();
         CameraCharacterRotation();
@@ -98,12 +96,12 @@ public class Player : MonoBehaviour
         if ( state == Walk)
         {
             isRuning = false;
-            plyaerMoveSpeed = dir.y > 0f ? walkSpeed : backwalkSpeed;
+            playerMoveSpeed = dir.y > 0f ? walkSpeed : backwalkSpeed;
         }
         else if(state == Run)
         {
             isRuning = true;
-            plyaerMoveSpeed = runSpeed;
+            playerMoveSpeed = runSpeed;
         }
     }
 
@@ -125,7 +123,7 @@ public class Player : MonoBehaviour
         dir = (transform.forward * dir.z) + (transform.right * dir.x);
         dir.Normalize(); // 대각선일 때 빨라지는걸 방지하는 정규화 
 
-        rigid.MovePosition(this.gameObject.transform.position + dir * plyaerMoveSpeed * Time.fixedDeltaTime);
+        rigid.MovePosition(this.gameObject.transform.position + dir * playerMoveSpeed * Time.fixedDeltaTime);
     }
     #endregion // 플레이어 무브 제어
 
@@ -165,13 +163,6 @@ public class Player : MonoBehaviour
     }
     #endregion // 마우스 무브 
 
-    #region 공격
-    public bool IsAttack()
-    {
-        return Input.GetButtonDown("Fire1") == true;
-    }
-    #endregion // 공격
-
     #region 점프
     private void Jump()
     {
@@ -179,9 +170,6 @@ public class Player : MonoBehaviour
         {
             Vector3 JumpVelocity = Vector3.up * jumpPower;
             rigid.AddForce(JumpVelocity, ForceMode.Impulse);
-            /*grounded = false; // 점프 후 땅에서 떨어진 상태로 변경*/
-            //Debug.Log("Jump!");
-            // isJumping = true;
         }
     }
     #endregion // 점프
@@ -190,7 +178,7 @@ public class Player : MonoBehaviour
     #region 땅 검출
 
     public bool IsGround() // 땅바닥인지 체크
-    {
+    { 
         return Physics.Raycast(transform.position, Vector3.down, 1f, groundLayer); // 바닥에 쏴서 땅바닥이면
     }
     #endregion // 땅 검출
